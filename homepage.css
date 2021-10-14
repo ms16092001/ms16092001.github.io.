@@ -1,0 +1,131 @@
+body{
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	width: 100%;
+}
+.slider{
+	width: 800px;
+	height: 400px;
+	background-image: url(anemia1.jpg);
+	margin: 40px auto;
+	animation-name: slide;
+	animation-direction: alternate-reverse;
+	animation-duration: 10s;
+	animation-fill-mode: forwards;
+	animation-iteration-count: infinite;
+	animation-play-state: running;
+	animation-timing-function: ease-in-out;
+}
+@keyframes slide{
+	50% {
+		background-image: url(anemia2.jpg);
+		}
+	75% {
+		background-image: url(anemia3.jpg);
+		}
+	100% {
+		background-image: url(anemia1.jpg);
+		}
+}
+ 
+.close:hover,
+.close:focus {
+    background-color: #E74C3C;
+    cursor: pointer;
+}
+#myBtn {
+	color: #5DADE2;
+}
+#myBtn:hover {
+	color: #1B4F72;
+	cursor: pointer;
+}
+
+
+
+span#links ,p#links
+{
+	color: #5DADE2;
+	text-decoration: none;
+}
+span#links:hover ,p#links:hover
+{
+	color: #1B4F72;
+}
+.home {								/* Home page information*/
+	margin-top: 166px;
+	max-width: 70%;
+}
+
+.home h2 {             /*formatting heading*/
+	font-family: 'Droid Sans', sans-serif;
+	letter-spacing: 3px;
+	word-spacing: 4px;
+	color: midnightblue;
+	padding: 14px;
+	text-shadow: 1px 1px 1px 2px midnightblue;
+}
+.home h4 {
+	font-family: 'Droid Sans', sans-serif;
+	letter-spacing: 2px;
+	word-spacing: 4px;
+	color: midnightblue;
+	padding: 14px;
+	text-shadow: 1px 1px 1px 2px midnightblue;	
+}
+
+
+
+#asidel span{
+    font-size: 18px;
+    font-family:'Droid Sans', sans-serif;
+    color:#262227;
+}
+#asider span{
+    font-size:18px;
+    font-family:'Droid Sans', sans-serif;
+    color:#262227;
+}											/* CONTENT */
+#asider hr{
+     background-color:#598287;
+      height: 7px; 
+      border:0px;
+}
+#asidel hr{
+     background-color:#598287;
+     height: 7px; 
+     border:0px;
+}
+
+
+div#footer, div#footer a {
+	background-color: #003375;
+	min-width: 40%;
+	width: 100%;
+	position: relative;
+	left: 0px;
+	right: 0px;
+	color: #DCFFFE;
+	font-size: 14px;
+	font-family: "Droid Sans", sans-serif;
+	letter-spacing: 2px;
+	overflow: auto;
+	text-decoration: none;
+} 
+div#footer ul#credits {
+	list-style-type: circle;
+	color: #DCFFFE;
+} 
+div#footer span#footright1 {
+	margin-left: 85%;
+	font-size: 19px;
+	position: absolute;
+	top: 50%;
+}
+div#footer span#footright2 {
+	margin-left: 85%;
+	font-size: 14px;
+	position: absolute;
+	top: 65%;
+}                                              

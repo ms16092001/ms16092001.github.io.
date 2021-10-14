@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Anemia Cure And Nutritional Generation Among Female And Child | </title>
+	<link rel="stylesheet" type="text/css" href="aboutpage.css"/>
+	<link rel="stylesheet" type="text/css" href="Header.css"/>
+	<link rel="stylesheet" type="text/css" href="medicinepage.css"/>
+	<link rel="stylesheet" type="text/css" href="diseasepage.css"/>	
+
+	<style type="text/css">
+		
+		span a {
+			text-decoration: none;
+			color: #B03A2E;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="border"></div>
+	<div id="hints"></div>
+	<div class="medictab">
+		
+			<h3>Anemia Cure Among Female And Child <p style="text-decoration:none;">Saving Lives | Protecting People | Sharing Knowledge</p></h3>
+			
+			<form action="SearchResults.php" method="GET" autocomplete="onkeyup">
+				<input type="text" name="search" placeholder="Search Anemia Type..." size="30" onkeyup="showHints(this.value)"/>
+				<input type="submit" value="Search" />
+			</form>
+	</div>
+
+	
+	<div class="navigation" id="navigation">
+		<ul>
+			<li><a href="index.html">Home</a></li>
+			
+			<li class="dropdown">
+				<li class="dropdown">
+				<li><a href="" class="active">List of Hospitals</a></li>
+				
+				
+			</li>
+				<li class="dropdown">
+				<a href="medicine.html" class="">Medicines</a>
+			<div class="dropctn">
+					<a href="Vitamin.html">Vitamin B12</a>
+					<a href="Procrit.html">Procrit</a>
+					<a href="Feosol.html">Feosol</a>
+					<a href="Folate">Folate</a>
+					<a href="Slow Fe">Slow Fe</a>
+					<a href="medicine.html">More...</a>		
+				</div>
+			</li>
+			
+			<li><a href="symptoms.html">Symptoms</a></li>
+			<li><a href="about.html">About Us</a></li>
+
+		</ul>
+	</div>
+<br/><br/><br/>
+
+<div style="position: relative; max-width: 100%; top: 70px; z-index:-1; border: 1px solid #00243D; background-color: #CEE4FF;">
+			<p style="font-size: 30px; font-family: 'Droid Sans',sans-serif; text-decoration: underline; text-align: center; color: #070C34;">Hospitals</p>
+		</div>
+
+
+	<div>
+	<ul class="vertNav">
+	        <li><a href="Medanta.html" target="medicineframe" class="1" id="linkactive">Medanta - The Medicity Hospital</a></li>
+			<li><a href="Kokilaben.html" target="medicineframe" class="1">Kokilaben Dhirubhai Ambani Hospital</a></li>
+			<li><a href="Jaslok.html" target="medicineframe" class="1">Jaslok Hospital</a></li>
+			<li><a href="Fortis.html" target="medicineframe" class="1">Fortis Hospital</a></li>
+			<li><a href="Nanavati.html" target="medicineframe" class="1">Nanavati Super Speciality Hospital</a></li>
+			<li><a href="Indraprastha.html" target="medicineframe" class="1">Indraprastha Apollo Hospital</a></li>
+			<li><a href="Dharamshila.html" target="medicineframe" class="1">Dharamshila Narayana Superspeciality Hospital</a></li>
+			<li><a href="BKL.html" target="medicineframe" class="1">BLK Super Specialty Hospital</a></li>
+			<li><a href="Wockhardt.html" target="medicineframe" style="border-bottom: none;"class="1">New Age Wockhardt Hospital</a></li>		
+			
+
+	</ul>
+	<iframe src="Medanta.html" name="medicineframe" id="framecss" class="1">
+		<!-- Frame box -->
+	</iframe>
+	</div>
+
+	<br/><br/><br/><br/><br/><br/>
+	<br/><br/><br/>
+
+	<div id="footer">
+		<p style="text-align: center; font-size: 11px;">Thank you for visiting</p>
+		<p style="text-align: center;">Anemia Cure Among Female And Child</p>
+		<p style="font-size: 11px; text-align: center;"><abbr title="Anemiafreeworld@gmail.com">Contact Us</abbr> | Visit Again | Stay Healthy | Feedback
+			<p style="color: #DCFFFE; margin-left: 10px; font-size: 19px;">Maintained By: -
+			<ul id="credits">
+				<li>Meet</li>
+				<li>Sarvesh</li>
+				<li>Ashish</li>
+			</ul>
+				<span id="footright1">Submitted To:-</span>
+				<span id="footright2">Rutvi Thakur Madam</span>
+			</p>
+	</div>
+
+
+
+
+	<!-- JAVASCRIPT FOR SEARCH SUGGESTIONS -->
+
+	<script type="text/javascript">
+		
+		function showHints(str)
+		{
+			if(str.length == 0 || str == "")
+			{
+				document.getElementById("hints").innerHTML="";
+				document.getElementById("hints").style.border="none";
+				document.getElementById("navigation").style.marginTop = "14px";
+				return;
+			}
+			else
+			{
+				var xmlhttp = new XMLHttpRequest();
+
+				xmlhttp.onreadystatechange = function()
+				{
+					if(this.readyState == 4 && this.status == 200)
+					{
+						document.getElementById("hints").innerHTML = this.responseText;
+						document.getElementById("hints").style.border = "1px solid blue";
+						document.getElementById("navigation").style.marginTop = "36px";
+					}
+				};
+
+				xmlhttp.open("GET", "SearchHints.php?q="+str, true);
+				xmlhttp.send();
+			}
+		}
+
+	</script>
+</body>
+</html>

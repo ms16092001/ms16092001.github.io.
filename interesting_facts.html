@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Anemia Cure And Nutritional Generation Among Female And Child| Home</title>
+	<link rel="stylesheet" type="text/css" href="homepage.css"/>
+	<link rel="stylesheet" type="text/css" href="Header.css"/>
+	<meta charset="utf-8"/>
+	<base href="index.html"/>
+</head>
+<body>
+	<div class="border"></div>
+	<div id="hints"></div>
+	<div class="medictab">
+		
+			<h3>Anemia Cure Among Female And Child <p style="text-decoration:none;">Saving Lives | Protecting People | Sharing Knowledge</p></h3>
+			
+			<form action="SearchResults.php" method="GET" autocomplete="off">
+				<input type="text" name="search" placeholder="Search Anemia Type..." size="30" onkeyup="showHints(this.value)"/>
+				<input type="submit" value="Search" />
+			</form>
+	</div>
+
+	
+	<div class="navigation" id="navigation">
+		<ul>
+			<li><a href="index.html" class="active">Home</a></li>
+			<li class="dropdown">
+				<a href="list of hospital.html" class="dropbtn">List of Hospitals</a>
+				
+			</li>
+			
+			
+			
+
+			<li class="dropdown">
+				<a href="medicine.html" class="">Medicines</a>
+			<div class="dropctn">
+					<a href="Vitamin.html">Vitamin B12</a>
+					<a href="Procrit.html">Procrit</a>
+					<a href="Feosol.html">Feosol</a>
+					<a href="Folate">Folate</a>
+					<a href="Slow Fe">Slow Fe</a>
+					<a href="medicine.html">More...</a>		
+				</div>
+			</li>
+			
+			<li><a href="symptoms.html">Symptoms</a></li>
+			<li><a href="about.html">About Us</a></li>
+
+		</ul>
+	</div>
+<br/><br/><br/>
+	<div style="position: relative; top: 55px; z-index: -1; min-width: 30%; width: 100%;">
+	<p style="word-spacing: 4px;"><span style="font-family: Tahoma, Geneva, sans-serif; font-size: 22px;">Interesting Facts</span></p>
+	</div>
+	<div style="position: relative; top: 30px; overflow: auto; z-index:-1;">
+		<p align="justify" style="font-family: Tahoma, Geneva, sans-serif; font-size: 18px; border: 3px solid midnightblue; padding-top: 8px; padding-left: 10px; padding-right: 10px; border-radius: 4px; background-color: #E6F5FF; letter-spacing: 0.5px;">
+			<br/><br/>
+			<span id="heading" style="text-decoration: underline;">
+				1) Things Most People don't Know About Anemia<br/>
+			</span>
+			<br/>
+				
+			i. Iron-deficiency anemia is the most common type of anemia.There are several different types of anemia, but as much as 50 percent of people with the condition are iron-deficient<br/>
+
+			ii. Anemia moves slowly. At first, symptoms of anemia can be tough to spot. But as it gets worse, you may experience severe fatigue and weakness.<br/>
+
+			iii. Iron-deficiency anemia is more common in women.Women who are pregnant or have heavy menstrual periods are at a higher risk for iron-deficiency.<br/>
+
+			iv. Your diet might have something to do with low iron levels.Our bodies absorb iron in animal-based foods like chicken and fish. If you don’t eat meat, choose foods high in iron, such as beans, spinach or tofu.
+            <br/>
+            v. Untreated iron-deficiency anemia can cause serious health problems.With anemia, your body isn’t making enough healthy red blood cells. This can cause damage to your organs and make your heart work too hard.<br/>
+			<br/>
+			<span id="heading" style="text-decoration: underline;">
+				2) Prevention and treatment for Anemia<br/>
+			</span>
+			<br/>
+			Management of anemia depends on the type of blood disorder you have. For example, your doctor may suggest that you try to raise your hemoglobin levels through iron-rich foods or supplementation, or treat the actual cause of the anemia if it’s a disease.There are over 400 types of anemia; each case should be handled differently depending on the cause.<br/><br/>
+
+			i)Anemia from blood loss.<br/><br/>Treatment options depend heavily on how much blood was lost. For excessive bleeding, the source of the blood loss needs to be stopped. If it cannot be stopped, blood transfusion may be necessary. The body may be able to produce enough red blood cells to make up for blood loss if it’s a small amount.  In that case, taking iron supplements may be required, but again, it’s important to consult with a doctor first.<br/><br/>
+			ii)Iron deficiency anemia.<br/><br/>For iron deficiency, adding iron-rich sources of protein such as lentils, red meat and tofu, to your diet can increase the body’s ability to produce hemoglobin (the substance that carries oxygen to the rest of the body). Foods high in iron include leafy greens like spinach and broccoli. Speak with your doctor and ask if you need to take supplements or see if you are already getting enough iron from your diet.<br/><br/>
+			iii)Anemia from red blood cell destruction.<br/><br/>Treatment might not be necessary for this type of anemia depending on what is causing the red blood cells to slow down. Speak with your doctor about why you have red blood cell destruction and the best treatment options based on its severity.<br/><br/>
+			<br/><br/>
+
+			
+		</p>
+	</div>
+	<br/><br/>
+
+	<div id="footer">
+		<p style="text-align: center; font-size: 11px;">Thank you for visiting</p>
+		<p style="text-align: center;">Anemia Cure Among Female And Child</p>
+		<p style="font-size: 11px; text-align: center;"><abbr title="Anemiafreeworld@gmail.com">Contact Us</abbr> | Visit Again | Stay Healthy | Feedback
+		<hr/>
+			<p style="color: #DCFFFE; margin-left: 10px; font-size: 19px;">Maintained By: -
+			<ul id="credits">
+				<li>Meet</li>
+				<li>Sarvesh</li>
+				<li>Ashish</li>
+			</ul></p>
+	</div>
+
+
+
+	<!-- JAVASCRIPT FOR SEARCH SUGGESTIONS -->
+
+	<script type="text/javascript">
+		
+		function showHints(str)
+		{
+			if(str.length == 0 || str == "")
+			{
+				document.getElementById("hints").innerHTML="";
+				document.getElementById("hints").style.border="none";
+				document.getElementById("navigation").style.marginTop = "14px";
+				return;
+			}
+			else
+			{
+				var xmlhttp = new XMLHttpRequest();
+
+				xmlhttp.onreadystatechange = function()
+				{
+					if(this.readyState == 4 && this.status == 200)
+					{
+						document.getElementById("hints").innerHTML = this.responseText;
+						document.getElementById("hints").style.border = "1px solid blue";
+						document.getElementById("navigation").style.marginTop = "36px";
+					}
+				};
+
+				xmlhttp.open("GET", "SearchHints.php?q="+str, true);
+				xmlhttp.send();
+			}
+		}
+
+	</script>
+</body>
+</html>

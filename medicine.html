@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Anemia Cure And Nutritional Generation Among Female And Child| Diseases</title>
+	<link rel="stylesheet" type="text/css" href="medicinepage.css"/>
+	<link rel="stylesheet" type="text/css" href="Header.css"/>
+	
+</head>
+<body>
+		<div class="border"></div>
+	<div id="hints"></div>
+	<div class="medictab">
+		
+			<h3>Anemia Cure Among Female And Child <p style="text-decoration:none;">Saving Lives | Protecting People | Sharing Knowledge</p></h3>
+			
+			<form action="SearchResults.php" method="GET" autocomplete="off">
+				<input type="text" name="search" placeholder="Search Anemia Type.." size="30" onkeyup="showHints(this.value)"/>
+				<input type="submit" value="Search" />
+			</form>
+	</div>
+
+	
+	<div class="navigation" id="navigation">
+		<ul>
+			<li><a href="index.html">Home</a></li>
+			
+			<li class="dropdown">
+				<a href="list of hospital.html" class="dropbtn">List of Hospitals</a>
+		
+			</li>
+			
+	
+			<li class="dropdown">
+				<a href="medicine.html" class="dropbtn active">Medicines</a>
+			<div class="dropctn">
+					<a href="Vitamin.html">Vitamin B12</a>
+					<a href="Procrit.html">Procrit</a>
+					<a href="Feosol.html">Feosol</a>
+					<a href="Folate">Folate</a>
+					<a href="Slow Fe">Slow Fe</a>
+					<a href="medicine.html">More...</a>		
+				</div>
+			</li>
+			
+			<li><a href="symptoms.html">Symptoms</a></li>
+			<li><a href="about.html">About Us</a></li>
+
+		</ul>
+	</div>
+<br/><br><br/>
+		<div style="position: relative; max-width: 100%; top: 70px; z-index:-1; border: 1px solid #00243D; background-color: #CEE4FF;">
+			<p style="font-size: 30px; font-family: 'Droid Sans',sans-serif; text-decoration: underline; text-align: center; color: #070C34;">Medicines</p>
+		</div>
+
+<br/>
+	<div>
+	<ul class="vertNav">		
+			<li><a href="Vitamin.html" target="medicineframe" class="1" id="linkactive">Vitamin B12(Cyanocobalamin)</a></li>
+			<li><a href="Slow Fe.html" target="medicineframe" class="1">Slow Fe</a></li>
+			<li><a href="Feosol.html" target="medicineframe" class="1">Feosol</a></li>
+			<li><a href="Folate.html" target="medicineframe" class="1">Folate</a></li>
+			<li><a href="anadrol-50.html" target="medicineframe" class="1">Anadrol-50</a></li>
+			<li><a href="epoetin alfa.html" target="medicineframe" class="1">Epoetin Alfa</a></li>
+			<li><a href="ferralet-90.html" target="medicineframe" class="1">Ferralet-90</a></li>
+			<li><a href="integra plus.html" target="medicineframe" class="1">Integra Plus</a></li>
+			<li><a href="mircera.html" target="medicineframe" class="1">Mircera</a></li>
+			<li><a href="Procrit.html" target="medicineframe" style="border-bottom: none;" class="1">Procrit</a></li>
+	</ul>
+	<iframe src="Vitamin.html" name="medicineframe" id="framecss">
+		<!-- Frame box -->
+	</iframe>
+	</div>
+
+	<br/><br/><br/><br/><br/><br/>
+	<br/><br/><br/><br/>
+
+	<div id="footer">
+		<p style="text-align: center; font-size: 11px;">Thank you for visiting</p>
+		<p style="text-align: center;">Anemia Cure Among Female And Child</p>
+		<p style="font-size: 11px; text-align: center;"><abbr title="Anemiafreeworld@gmail.com">Contact Us</abbr> | Visit Again | Stay Healthy | Feedback
+		<hr/>
+			<p style="color: #DCFFFE; margin-left: 10px; font-size: 19px;">Maintained By: -
+			<ul id="credits">
+				<li>Meet</li>
+				<li>Sarvesh</li>
+				<li>Ashish</li>
+			</ul>
+				<span id="footright1">Submitted To:-</span>
+				<span id="footright2">Rutvi Thakur Madam</span>
+			</p>
+	</div>
+
+	<script type="text/javascript" src="diseasemedicine.js"></script>
+	<!-- JAVASCRIPT FOR SEARCH SUGGESTIONS -->
+
+	<script type="text/javascript">
+		
+		function showHints(str)
+		{
+			if(str.length == 0 || str == "")
+			{
+				document.getElementById("hints").innerHTML="";
+				document.getElementById("hints").style.border="none";
+				document.getElementById("navigation").style.marginTop = "14px";
+				return;
+			}
+			else
+			{
+				var xmlhttp = new XMLHttpRequest();
+
+				xmlhttp.onreadystatechange = function()
+				{
+					if(this.readyState == 4 && this.status == 200)
+					{
+						document.getElementById("hints").innerHTML = this.responseText;
+						document.getElementById("hints").style.border = "1px solid blue";
+						document.getElementById("navigation").style.marginTop = "36px";
+					}
+				};
+
+				xmlhttp.open("GET", "SearchHints.php?q="+str, true);
+				xmlhttp.send();
+			}
+		}
+
+	</script>
+
+</body>
+</html>
